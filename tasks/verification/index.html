@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration with Email Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("ZmzCk5VrkqHFeUwNP"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+        })();
+    </script>
+</head>
+<body>
+   
+
+    <section class="registration">
+        <h2></h2>
+        <div class="registration-form">
+            <h2>Registration Form</h2>
+            <form id="registration-form">
+                <div class="form-row">
+                    <input type="text" placeholder="FIRST NAME" id="first-name" required>
+                    <input type="text" placeholder="LAST NAME" id="last-name" required>
+                </div>
+                <input type="text" placeholder="COLLEGE NAME" id="college-name" required>
+                <input type="email" placeholder="EMAIL" id="email" required>
+                <button type="button" id="send-code-button">Send Verification Code</button>
+                <div class="form-row">
+                    <input type="text" placeholder="VERIFICATION CODE" id="verification-code" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="success-message" style="display:none;">
+            <h2>Registration Successfully done..</h2>
+            <p>Your email has been verified!</p>
+        </div>
+    </section>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
